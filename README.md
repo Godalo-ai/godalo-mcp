@@ -33,7 +33,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "godalo": {
       "command": "npx",
-      "args": ["mcp-remote", "https://godalo-mcp.workers.dev/mcp"]
+      "args": ["mcp-remote", "https://mcp.godalo.ai/mcp"]
     }
   }
 }
@@ -46,7 +46,7 @@ Restart Claude Desktop. The `get_recommendations` tool appears immediately.
 ### Any MCP client (remote URL)
 
 ```
-https://godalo-mcp.workers.dev/mcp
+https://mcp.godalo.ai/mcp
 ```
 
 ### Custom agent (TypeScript)
@@ -57,7 +57,7 @@ import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/
 
 const client = new Client({ name: "my-agent", version: "1.0.0" });
 const transport = new StreamableHTTPClientTransport(
-  new URL("https://godalo-mcp.workers.dev/mcp")
+  new URL("https://mcp.godalo.ai/mcp")
 );
 await client.connect(transport);
 
@@ -111,7 +111,7 @@ Up to 5 results, ranked by relevance. All results normalised to the same format 
 
 | Property | Value |
 |---|---|
-| Endpoint | `https://godalo-mcp.workers.dev/mcp` |
+| Endpoint | `https://mcp.godalo.ai/mcp` |
 | Protocol | Model Context Protocol 2025-11-25 |
 | Transport | Streamable HTTP |
 | Authentication | None — public endpoint |
